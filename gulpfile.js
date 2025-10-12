@@ -1,11 +1,12 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
+const sass = require('sass')
+const gulpSass = require('gulp-sass')(require('sass'));
 const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
 
 function styles(){
     return gulp.src('./src/styles/*.scss')
-        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(gulpSass({outputStyle: 'compressed'}))
         .pipe(gulp.dest('./dist/css'))
 }
 
