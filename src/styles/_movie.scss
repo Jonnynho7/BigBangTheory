@@ -1,0 +1,56 @@
+@use 'variaveis';
+
+.movie {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 80px;
+
+    
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at left,
+                rgba(0, 0, 0, 0.6) 0%, // centro escuro
+                rgba(0, 0, 0, 0.6) 40%, // suaviza o meio
+                rgba(0, 0, 0, 0.1) 70%, // transição suave
+                transparent 100%);
+        z-index: 1;
+    }
+
+    &__logo {
+        position: relative;
+        max-width: 500px;
+        height: 500px;
+        z-index: 3;
+    }
+
+    &--watch-btn {
+        position: relative;
+        z-index: 3;
+        margin-left: 50px;
+        padding: 40px;
+        border-radius: 30px;
+        font-size: 20px;
+        margin-top: 60px;
+        background-color: variaveis.$color2;
+    }
+
+    
+}
